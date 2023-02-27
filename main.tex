@@ -12,7 +12,7 @@
 \usepackage{mathtools}
 \usepackage{float}
 \usepackage{enumitem}
-
+\usepackage{pdfpages}
 \usepackage[normalem]{ulem}
 
 \usepackage{blkarray}% http://ctan.org/pkg/blkarray
@@ -104,8 +104,9 @@ La repository in cui segnalare problematiche o suggerire modifiche tramite PR si
 %------------------------------------------------------------------------------------------------------
 
 \tableofcontents
-
-\newpage
+\section{Quiz parte teorica}
+\includepdf[pages={1-8}]{Calcolo_Completo.pdf}
+\section{Dimostrazioni irrinunciabili}
 \import{res/}{precis_macchina}
 \newpage
 \import{res/}{analisi_stab}
@@ -126,5 +127,6 @@ La repository in cui segnalare problematiche o suggerire modifiche tramite PR si
 \import{res/}{stima_eq_normali}
 \newpage
 \import{res/}{stima_cond_sist_lineare}
-
+\newpage
+\section{Dimostrazioni facoltative}
 \end{document}

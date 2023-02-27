@@ -1,5 +1,5 @@
-\section{Analisi di stabilità di moltiplicazione, divisione,	addizione e sottrazione con numeri approssimati}
-\subsection{Moltiplicazione}
+\subsection{Analisi di stabilità di moltiplicazione, divisione,	addizione e sottrazione con numeri approssimati}
+\subsubsection{Moltiplicazione}
 \[ \varepsilon_{xy} = \frac{\lvert \, xy - \Tilde{x}\Tilde{y} \, \rvert}{\lvert \, xy \, \rvert}, \quad x , y \ne 0 \]
 Usiamo la stessa tecnica che si usa per dimostrare che il limite del prodotto di due successioni o funzioni è il prodotto dei limiti, aggiungendo e togliendo a numeratore ad esempio $\Tilde{x}y$
 \[\begin{split}
@@ -18,7 +18,7 @@ Però possiamo dare una stima più precisa di  $\frac{\lvert \,\Tilde{x}\, \rver
 e quindi \[ \varepsilon_{xy} \le \varepsilon_x + (1 + \varepsilon_x)\,\varepsilon_y\]\\
 Solitamente $\varepsilon_x \le \varepsilon_M \approx 10^{-16} \Rightarrow 1 + \varepsilon_x$ è vicinissimo ad 1.
 Ma anche se $\varepsilon_x = 1$ (errore del 100\%, molto grande) $\Rightarrow (1+\varepsilon_x)=2$ e la stabilità della moltiplicazione non cambia.
-\subsection{Divisione}
+\subsubsection{Divisione}
 La divisione è la moltiplicazione per il reciproco $\frac{x}{y} = x \cdot \frac{1}{y}$.\\
 Analizzando quindi l'operazione di reciproco
 \[ \varepsilon_{\frac{1}{y}} = \frac{\abs*{\,\frac{1}{y} - \frac{1}{\Tilde{y}}\,} }{\abs*{\,\frac{1}{y}\,}} = \frac{\frac{\abs*{\,\Tilde{y} - y\,}}{\abs*{\,\Tilde{y}y\,}}}{\abs*{\,\frac{1}{y}\,}} = \frac{\abs*{\,\Tilde{y} - y\,}}{\abs*{\,y\,}} \cdot \frac{\abs*{\,y\,}}{\abs*{\,\Tilde{y}\,}} \approx \varepsilon_y \qquad \Bigl( \text{questo perchè } \frac{\abs*{\,\Tilde{y} - y\,}}{\abs*{\,y\,}} = \varepsilon_y . \Bigr)\]
@@ -37,7 +37,7 @@ Quindi
 \[\varepsilon_{\frac{1}{y}} = \varepsilon_y\,\frac{\abs{\,y\,}}{\abs{\,\Tilde{y}\,}} \lesssim \varepsilon_y (1 + \varepsilon_y) \approx \varepsilon_y \Rightarrow \varepsilon_{\frac{1}{y}} \lesssim \varepsilon_y\]
 Infine abbiamo che per la divisione vale (usando la stima della moltiplicazione)
 \[\varepsilon_{\frac{x}{y}} \lesssim \varepsilon_x+\varepsilon_y\]
-\subsection{Somma Algebrica}
+\subsubsection{Somma Algebrica}
 \[x+y = 
 \begin{cases}
 ADDIZIONE & \text{se $sign(x)=sign(y)$} \\
