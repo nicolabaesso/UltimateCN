@@ -60,4 +60,17 @@ Nel caso in cui $\abs*{\,x\,}\,,\abs*{\,y\,}$ siano molto vicini in termini \und
 \[
 \abs*{\,x + y\,} \ll \abs*{\,x\,}\,,\abs*{\,y\,} \, \Rightarrow \, w_1\,,w_2 \gg 1
 \]
-
+\textbf{Esempio sottrazione (si inserisce il più semplice)}\\
+Sia \[F(10,4,L,U)\] con L e U di opportuna dimensione, i numeri 
+\[x=0.10016\]
+\[y=-0.10014\]
+e le loro relative approssimazioni, ovvero
+\[\Tilde{x}=fl^4(x)=0.1002\]
+\[\Tilde{y}=fl^4(y)=-0.1001\]
+Si ha che
+\[x \bigoplus y=fl^4(fl^4(x)+fl^4(y))=fl^4(0.1002-0.1001)=10^{-4}\]
+quando $x+y=4*10^{-5}$. Quindi l'errore relativo nel risultato è
+\[\frac{\abs*{\,(x + y) - (x + y)\,}}{\abs*{\,x + y\,}} = \frac{\abs*{\,4*10^{-5} - 10^{-4}\,}}{\,4*10^{-5}\,} = \frac{\,6*10^{-5}\,}{\,4*10^{-5}\,} = \frac{3}{2} = 150\%\]
+Concludiamo calcolando i pesi:
+\[ w_1=\frac{\abs*{x}}{\abs{x+y}} \simeq \frac{10^{-1}}{4*10{-5}}=\frac{10^4}{4}=2500 \]
+Analogamente, $w_2 \simeq 2500.$
